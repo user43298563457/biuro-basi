@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<!--
-  BIURO BASI Barbara Koczorowska – strona dwujęzyczna (PL / UA)
-  Jeden plik, bez kroku budowania. Wdrożenie na Vercel:
-    1) wrzuć index.html do głównego katalogu repozytorium na GitHubie,
-    2) Vercel → Add New → Project → wybierz repozytorium (Framework Preset: "Other", bez Build Command),
-    3) po wdrożeniu dodaj własną domenę i uzupełnij <link rel="canonical"> oraz adres w JSON-LD.
-  Teksty polskie edytujesz bezpośrednio w HTML, ukraińskie – w obiekcie UA w skrypcie na dole pliku.
--->
 <html lang="pl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
   <title>Biuro Basi Rzeszów | Legalizacja pobytu, karta pobytu, ZUS 800+, PIT</title>
   <meta name="description" content="Biuro Rzeszów: legalizacja pobytu, karta pobytu, wnioski ZUS 800+, PIT, Profil Zaufany, rejestracja pojazdów i ubezpieczenia. Biuro Basi – Barbara Koczorowska.">
   <meta name="keywords" content="biuro rzeszów, legalizacja pobytu, karta pobytu, karta czasowego pobytu, pobyt stały, obywatelstwo polskie, wnioski zus 800+, 300+, renta wdowia, pit biuro basia, PIT-37, Profil Zaufany, rejestracja pojazdów, ubezpieczenia, Biuro Basi, Barbara Koczorowska">
   <meta name="author" content="BIURO BASI Barbara Koczorowska">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0c2140">
-  <!-- Po wdrożeniu odkomentuj i wpisz swoją domenę: -->
-  <!-- <link rel="canonical" href="https://twoja-domena.pl/"> -->
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BIURO BASI Barbara Koczorowska">
@@ -31,7 +20,6 @@
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230c2140'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23c19a3f' stroke-width='2'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='700' fill='%23d6b35e'%3EB%3C/text%3E%3C/svg%3E">
 
-  <!-- Dane strukturalne (uzupełnij adres, url i godziny, gdy będą dostępne) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,12 +44,10 @@
   }
   </script>
 
-  <!-- Czcionki: Literata (nagłówki) + Onest (tekst); obie mają polskie znaki i cyrylicę -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Literata:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS przez CDN -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script>
     tailwind.config = {
@@ -110,7 +96,6 @@
     }
     .field:focus { outline: 2px solid #c19a3f; outline-offset: 1px; border-color: #c19a3f; }
 
-    /* Hero: lista spraw, odhaczanie, pieczątka – jedna sekwencja przy wejściu na stronę */
     .paper-row { display: flex; align-items: center; gap: .9rem; padding: .7rem 0; border-bottom: 1px dotted rgba(12, 33, 64, .3); font-size: 1rem; }
     .paper-row .box { display: grid; place-items: center; flex: none; width: 1.25rem; height: 1.25rem; border: 1.5px solid #0c2140; border-radius: 2px; }
     .tick {
@@ -139,7 +124,6 @@
 
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-md focus:bg-gold-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-navy-900" data-i18n="skip">Przejdź do treści</a>
 
-  <!-- ===================== NAGŁÓWEK ===================== -->
   <header id="top" class="sticky top-0 z-50 border-b border-gold-500/25 bg-navy-900/95 backdrop-blur">
     <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5">
       <a href="#top" class="flex items-center gap-3" aria-label="BIURO BASI Barbara Koczorowska">
@@ -202,7 +186,6 @@
           </div>
         </div>
 
-        <!-- Lista spraw z pieczątką (element dekoracyjny) -->
         <div class="relative mx-auto w-full max-w-sm pb-8 lg:col-span-5 lg:max-w-none lg:pl-10" aria-hidden="true">
           <div class="relative -rotate-[1.5deg] rounded-sm bg-cream-50 px-7 pb-12 pt-7 text-ink shadow-2xl shadow-black/40">
             <p class="font-serif text-xl font-semibold text-navy-900" data-i18n="paper.title">Lista spraw</p>
@@ -236,14 +219,13 @@
       </div>
     </section>
 
-    <!-- ===================== O NAS ===================== -->
     <section id="o-nas" class="bg-cream-50 py-20 md:py-28">
       <div class="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-12 lg:gap-14">
         <div class="lg:col-span-4">
           <h2 class="font-serif text-3xl font-semibold leading-tight text-navy-900 md:text-4xl" data-i18n="about.title">Formalności bez stresu w jednym biurze</h2>
         </div>
         <div class="lg:col-span-8">
-          <p class="max-w-[34em] font-serif text-xl leading-[1.7] text-ink md:text-[1.3rem]" data-i18n="about.p1">BIURO BASI Barbara Koczorowska to biuro w Rzeszowie, w którym załatwisz większość spraw urzędowych bez błądzenia po urzędach i formularzach. Pomagamy w legalizacji pobytu, wnioskach do ZUS, rozliczeniach podatkowych, zakładaniu Profilu Zaufanego, rejestracji pojazdów oraz w wyborze ubezpieczenia.</p>
+          <p class="max-w-[34em] font-serif text-xl leading-[1.7] text-ink md:text-[1.3rem]" data-i18n="about.p1">BIURO BASI Barbara Koczorowska to biuro w Stęszewie, w którym załatwisz większość spraw urzędowych bez błądzenia po urzędach i formularzach. Pomagamy w legalizacji pobytu, wnioskach do ZUS, rozliczeniach podatkowych, zakładaniu Profilu Zaufanego, rejestracji pojazdów oraz w wyborze ubezpieczenia.</p>
           <p class="mt-5 max-w-[62ch] text-[1.05rem] leading-relaxed text-muted" data-i18n="about.p2">Wyjaśniamy procedury prostym językiem, pomagamy skompletować dokumenty i wypełnić wnioski – żebyś mógł spokojnie zająć się własnymi sprawami.</p>
 
           <dl class="mt-10 grid gap-x-8 gap-y-6 border-t border-navy-900/15 pt-8 sm:grid-cols-3">
@@ -264,7 +246,6 @@
       </div>
     </section>
 
-    <!-- ===================== USŁUGI ===================== -->
     <section id="uslugi" class="bg-cream-100 py-20 md:py-28">
       <div class="mx-auto max-w-6xl px-5">
         <h2 class="font-serif text-3xl font-semibold leading-tight text-navy-900 md:text-4xl" data-i18n="services.title">Z czym możemy Ci pomóc</h2>
@@ -272,7 +253,6 @@
 
         <div class="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 
-          <!-- 1. Legalizacja pobytu -->
           <article class="rounded-lg bg-navy-900 p-7 text-cream-50 md:col-span-2 md:p-9" style="--tick:#d6b35e">
             <div class="flex items-start gap-5">
               <span class="icon-tile border-gold-400/60 text-gold-400">
@@ -292,7 +272,6 @@
             <a href="#kontakt" data-service="legalizacja" class="mt-8 inline-block border-b border-gold-400 pb-0.5 text-sm font-semibold text-gold-300 transition hover:text-gold-400" data-i18n="services.more">Zapytaj o tę usługę</a>
           </article>
 
-          <!-- 2. ZUS -->
           <article class="flex flex-col rounded-lg border border-t-[3px] border-navy-900/10 border-t-gold-500 bg-white p-7">
             <span class="icon-tile border-gold-500/50 bg-cream-50 text-gold-700">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
@@ -309,7 +288,6 @@
             <a href="#kontakt" data-service="zus" class="mt-auto self-start border-b border-gold-500 pb-0.5 pt-6 text-sm font-semibold text-gold-700 transition hover:text-navy-900" data-i18n="services.more">Zapytaj o tę usługę</a>
           </article>
 
-          <!-- 3. PIT -->
           <article class="flex flex-col rounded-lg border border-t-[3px] border-navy-900/10 border-t-gold-500 bg-white p-7">
             <span class="icon-tile border-gold-500/50 bg-cream-50 text-gold-700">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="8" y="6" width="8" height="3" rx=".5"/><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 16.5h.01M12 16.5h.01M15.5 16.5h.01"/></svg>
@@ -325,7 +303,6 @@
             <a href="#kontakt" data-service="pit" class="mt-auto self-start border-b border-gold-500 pb-0.5 pt-6 text-sm font-semibold text-gold-700 transition hover:text-navy-900" data-i18n="services.more">Zapytaj o tę usługę</a>
           </article>
 
-          <!-- 4. Profil Zaufany -->
           <article class="flex flex-col rounded-lg border border-t-[3px] border-navy-900/10 border-t-gold-500 bg-white p-7">
             <span class="icon-tile border-gold-500/50 bg-cream-50 text-gold-700">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/><circle cx="12" cy="16" r="1.2"/></svg>
@@ -339,7 +316,6 @@
             <a href="#kontakt" data-service="profil" class="mt-auto self-start border-b border-gold-500 pb-0.5 pt-6 text-sm font-semibold text-gold-700 transition hover:text-navy-900" data-i18n="services.more">Zapytaj o tę usługę</a>
           </article>
 
-          <!-- 5. Wydział Komunikacji -->
           <article class="flex flex-col rounded-lg border border-t-[3px] border-navy-900/10 border-t-gold-500 bg-white p-7">
             <span class="icon-tile border-gold-500/50 bg-cream-50 text-gold-700">
               <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l1.8-4.5A2 2 0 017.7 6h8.6a2 2 0 011.9 1.5L20 12"/><rect x="3" y="12" width="18" height="5" rx="1.5"/><path d="M7.5 14.5h.01M16.5 14.5h.01M6 17v2M18 17v2"/></svg>
@@ -353,7 +329,6 @@
             <a href="#kontakt" data-service="komunikacja" class="mt-auto self-start border-b border-gold-500 pb-0.5 pt-6 text-sm font-semibold text-gold-700 transition hover:text-navy-900" data-i18n="services.more">Zapytaj o tę usługę</a>
           </article>
 
-          <!-- 6. Ubezpieczenia -->
           <article class="rounded-lg border border-navy-900/10 bg-cream-200 p-7 md:col-span-2 md:p-9 lg:col-span-3">
             <div class="grid gap-8 md:grid-cols-12 md:items-center">
               <div class="md:col-span-7">
@@ -382,7 +357,6 @@
       </div>
     </section>
 
-    <!-- ===================== KONTAKT ===================== -->
     <section id="kontakt" class="bg-navy-900 py-20 text-cream-50 md:py-28">
       <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-12 lg:gap-16">
 
@@ -466,7 +440,6 @@
                 <textarea id="f-msg" name="message" rows="4" class="field mt-1.5 resize-y"></textarea>
               </div>
 
-              <!-- pole-pułapka na boty -->
               <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
               <label class="flex items-start gap-3 text-sm leading-relaxed text-muted">
@@ -485,8 +458,7 @@
       </div>
     </section>
   </main>
-
-  <!-- ===================== STOPKA ===================== -->
+  
   <footer class="bg-navy-950 pb-28 pt-12 text-cream-50/70 md:pb-12">
     <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
       <div>
@@ -502,7 +474,6 @@
     </div>
   </footer>
 
-  <!-- Pasek kontaktowy na telefonach -->
   <div class="fixed inset-x-0 bottom-0 z-40 border-t border-gold-500/25 bg-navy-900/95 p-3 backdrop-blur md:hidden" style="padding-bottom: calc(.75rem + env(safe-area-inset-bottom));">
     <div class="mx-auto flex max-w-md gap-3">
       <a href="tel:+48693750336" class="flex flex-1 items-center justify-center gap-2 rounded-md bg-gold-500 py-3.5 text-base font-bold text-navy-900">
@@ -520,22 +491,12 @@
   (function () {
     'use strict';
 
-    /* ==========================================================
-       USTAWIENIA FORMULARZA KONTAKTOWEGO
-       Strona na Vercel jest statyczna, więc formularz potrzebuje miejsca, dokąd wysłać dane:
-       1) formEndpoint – adres usługi formularzy (np. Formspree: "https://formspree.io/f/xxxxxxx").
-          Wiadomości trafią wtedy na Twój e-mail.
-       2) email – jeśli endpoint jest pusty, a e-mail podany, formularz otworzy program pocztowy.
-       3) gdy oba pola są puste, formularz otwiera WhatsApp z gotową wiadomością na numer poniżej.
-       ========================================================== */
     const CONFIG = {
       formEndpoint: '',
-      email: '',
-      whatsapp: '48693750336'   // numer bez "+" i spacji
+      email: 'biurobasi@o2.pl',
+      whatsapp: '48693750336'   
     };
 
-    /* ---------- Tłumaczenia ukraińskie ----------
-       Polski tekst jest w HTML (data-i18n="klucz"); tutaj tylko wersja UA. */
     const UA = {
       'skip': 'Перейти до змісту',
       'nav.aria': 'Головна навігація',
@@ -638,7 +599,6 @@
       'footer.rights': '© <span class="js-year">2026</span> BIURO BASI Barbara Koczorowska. Усі права захищено.'
     };
 
-    /* Komunikaty dynamiczne (formularz) */
     const DYN = {
       pl: {
         sending: 'Wysyłanie…',
@@ -659,7 +619,6 @@
     const STORAGE_KEY = 'biuro-basi-lang';
     let lang = 'pl';
 
-    /* ---------- Przełącznik języka ---------- */
     const i18nEls = Array.from(document.querySelectorAll('[data-i18n]'));
     const attrEls = Array.from(document.querySelectorAll('[data-i18n-attr]')).map(function (el) {
       const pairs = el.getAttribute('data-i18n-attr').split(';').map(function (s) { return s.trim(); }).filter(Boolean).map(function (s) {
@@ -673,7 +632,6 @@
     const ogDesc = document.querySelector('meta[property="og:description"]');
     const langBtns = Array.from(document.querySelectorAll('.lang-btn'));
 
-    /* polski = oryginalna treść z HTML */
     i18nEls.forEach(function (el) { el.dataset.pl = el.innerHTML; });
     const META = {
       pl: { title: document.title, desc: metaDesc.content, ogDesc: ogDesc.content },
@@ -734,7 +692,6 @@
     const initial = detectLang();
     if (initial !== 'pl') setLang(initial, false);
 
-    /* ---------- Menu mobilne ---------- */
     const menuBtn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     const iconOpen = document.getElementById('icon-open');
@@ -751,20 +708,17 @@
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { toggleMenu(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggleMenu(false); });
 
-    /* ---------- Cień nagłówka po przewinięciu ---------- */
     const header = document.getElementById('top');
     function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    /* ---------- Wybór usługi z karty → formularz ---------- */
     const form = document.getElementById('contact-form');
     const serviceSelect = document.getElementById('f-service');
     document.querySelectorAll('[data-service]').forEach(function (a) {
       a.addEventListener('click', function () { serviceSelect.value = a.dataset.service; });
     });
 
-    /* ---------- Formularz ---------- */
     const statusEl = document.getElementById('form-status');
     const submitBtn = document.getElementById('form-submit');
 
@@ -775,7 +729,7 @@
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      if (form.elements.website.value) return;   // pułapka na boty
+      if (form.elements.website.value) return;
 
       const fd = new FormData(form);
       const opt = serviceSelect.selectedOptions[0];
