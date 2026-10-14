@@ -1,0 +1,16 @@
+{
+  "name": "biuro-basi",
+  "version": "1.0.0",
+  "description": "BIURO BASI Barbara Koczorowska - Official Website",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Static HTML site - open index-poprawiony.html in browser'",
+    "build": "echo 'No build required for static HTML'"
+  },
+  "keywords": [],
+  "author": "Barbara Koczorowska",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
