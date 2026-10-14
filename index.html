@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <!--
   BIURO BASI Barbara Koczorowska – strona dwujęzyczna (PL / UA)
-  Jeden plik, bez kroku budowania. Wdrożenie na Vercel:
-    1) wrzuć index.html do głównego katalogu repozytorium na GitHubie,
-    2) Vercel → Add New → Project → wybierz repozytorium (Framework Preset: "Other", bez Build Command),
-    3) po wdrożeniu dodaj własną domenę i uzupełnij <link rel="canonical"> oraz adres w JSON-LD.
-  Teksty polskie edytujesz bezpośrednio w HTML, ukraińskie – w obiekcie UA w skrypcie na dole pliku.
 -->
 <html lang="pl">
 <head>
@@ -19,8 +14,6 @@
   <meta name="author" content="BIURO BASI Barbara Koczorowska">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0c2140">
-  <!-- Po wdrożeniu odkomentuj i wpisz swoją domenę: -->
-  <!-- <link rel="canonical" href="https://twoja-domena.pl/"> -->
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BIURO BASI Barbara Koczorowska">
@@ -31,7 +24,6 @@
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230c2140'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23c19a3f' stroke-width='2'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='32' font-weight='700' fill='%23d6b35e'%3EB%3C/text%3E%3C/svg%3E">
 
-  <!-- Dane strukturalne (uzupełnij adres, url i godziny, gdy będą dostępne) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,15 +48,12 @@
   }
   </script>
 
-  <!-- Czcionki: Literata (nagłówki) + Onest (tekst); obie mają polskie znaki i cyrylicę -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Literata:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Włącza animacje przy przewijaniu (bez JS wszystko jest od razu widoczne) -->
   <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Tailwind CSS przez CDN -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script>
     tailwind.config = {
@@ -191,7 +180,7 @@
 
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-md focus:bg-gold-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-navy-900" data-i18n="skip">Przejdź do treści</a>
 
-  <!-- ===================== NAGŁÓWEK ===================== -->
+  <!-- NAGŁÓWEK -->
   <header id="top" class="sticky top-0 z-50 border-b border-gold-500/25 bg-navy-900/95 backdrop-blur">
     <div class="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5">
       <a href="#top" class="flex items-center gap-3" aria-label="BIURO BASI Barbara Koczorowska">
@@ -237,7 +226,7 @@
 
   <main id="main">
 
-    <!-- ===================== HERO ===================== -->
+    <!-- HERO -->
     <section class="bg-navy-900 text-cream-50">
       <div class="mx-auto grid max-w-6xl gap-14 px-5 py-16 md:py-24 lg:grid-cols-12 lg:items-center">
 
@@ -292,7 +281,7 @@
       </div>
     </section>
 
-    <!-- ===================== O NAS ===================== -->
+    <!-- O NAS -->
     <section id="o-nas" class="bg-cream-50 py-20 md:py-28">
       <div class="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-12 lg:gap-14">
         <div class="lg:col-span-4">
@@ -320,7 +309,7 @@
       </div>
     </section>
 
-    <!-- ===================== USŁUGI ===================== -->
+    <!-- USŁUGI -->
     <section id="uslugi" class="bg-cream-100 py-20 md:py-28">
       <div class="mx-auto max-w-6xl px-5">
         <h2 class="reveal font-serif text-3xl font-semibold leading-tight text-navy-900 md:text-4xl" data-i18n="services.title">Z czym możemy Ci pomóc</h2>
@@ -438,7 +427,7 @@
       </div>
     </section>
 
-    <!-- ===================== KONTAKT ===================== -->
+    <!-- KONTAKT -->
     <section id="kontakt" class="bg-navy-900 py-20 text-cream-50 md:py-28">
       <div class="mx-auto grid max-w-6xl gap-12 px-5 lg:grid-cols-12 lg:gap-16">
 
@@ -542,7 +531,7 @@
     </section>
   </main>
 
-  <!-- ===================== STOPKA ===================== -->
+  <!-- STOPKA -->
   <footer class="bg-navy-950 pb-28 pt-12 text-cream-50/70 md:pb-12">
     <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
       <div>
